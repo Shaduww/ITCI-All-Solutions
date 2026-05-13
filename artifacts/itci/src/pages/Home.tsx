@@ -14,9 +14,32 @@ import {
   ArrowRight,
   Menu,
   X,
-  MapPin
+  MapPin,
+  Monitor
 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
+
+function ITCILogo({ size = 48 }: { size?: number }) {
+  return (
+    <div
+      style={{ width: size, height: size }}
+      className="relative flex-shrink-0 bg-primary rounded-xl flex flex-col items-center justify-center overflow-hidden shadow-lg shadow-primary/30"
+    >
+      <Monitor
+        style={{ width: size * 0.75, height: size * 0.75 }}
+        className="text-white/20 absolute"
+        strokeWidth={1.5}
+      />
+      <span
+        style={{ fontSize: size * 0.31, letterSpacing: "0.04em" }}
+        className="relative z-10 font-display font-black text-white leading-none"
+      >
+        IT
+      </span>
+    </div>
+  );
+}
 
 const navLinks = [
   { name: "Services", href: "#services" },
@@ -74,9 +97,7 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer">
-            <div className="w-10 h-10 bg-primary flex items-center justify-center font-display font-bold text-xl text-primary-foreground">
-              IT
-            </div>
+            <ITCILogo size={44} />
             <div>
               <div className="font-display font-bold text-xl tracking-tight leading-none text-white">ITCI</div>
               <div className="text-[0.6rem] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
@@ -320,9 +341,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-primary flex items-center justify-center font-display font-bold text-xl text-primary-foreground">
-                  IT
-                </div>
+                <ITCILogo size={44} />
                 <div>
                   <div className="font-display font-bold text-xl tracking-tight leading-none text-white">ITCI</div>
                   <div className="text-[0.6rem] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
