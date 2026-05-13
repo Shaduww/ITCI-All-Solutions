@@ -110,7 +110,7 @@ export default function Home() {
               >
                 ITCI
               </div>
-              <div className="text-[15px] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
+              <div className="text-[15px] text-primary font-black uppercase tracking-widest leading-none mt-1">Consulting</div>
               <div className="text-[12px] text-white italic tracking-wide leading-none mt-1">We fix your tech. We restore your peace.</div>
             </div>
           </div>
@@ -374,7 +374,7 @@ export default function Home() {
                   >
                     ITCI
                   </div>
-                  <div className="text-[15px] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
+                  <div className="text-[15px] text-primary font-black uppercase tracking-widest leading-none mt-1">Consulting</div>
                 </div>
               </div>
               <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
