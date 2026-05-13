@@ -164,23 +164,29 @@ export default function Home() {
       )}
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/hero-bg.png" 
-            alt="Data Center" 
-            className="w-full h-full object-cover opacity-20"
+      <section className="relative pt-32 pb-0 lg:pt-40 overflow-hidden min-h-[90vh] flex items-center">
+        {/* Subtle dark overlay on the left */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-background via-background/95 to-background/20 pointer-events-none" />
+
+        {/* Futuristic data centre image — full bleed right side */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-3/5 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=90"
+            alt="Futuristic Data Centre"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
+          {/* gradient blending into dark background on the left edge */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+          {/* subtle cyan tint overlay */}
+          <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16">
+          {/* Left — text content */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="max-w-3xl"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -189,7 +195,7 @@ export default function Home() {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
               All Solutions In <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">One Place.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed">
               The premier IT partner for small and midsize Canadian businesses. We transform technology challenges into reliable, scalable, and secure operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -203,6 +209,9 @@ export default function Home() {
               </Button>
             </div>
           </motion.div>
+
+          {/* Right — spacer so the image shows through naturally on large screens */}
+          <div className="hidden lg:block" />
         </div>
       </section>
 
