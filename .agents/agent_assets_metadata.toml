@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "IHCX0S7EOx1HAONd_A18h"
+uri = "file://artifacts/itci/public/hero-bg.png"
+type = "image"
+title = "Hero data center background"
+
+[[generated]]
+id = "QgpO7JGUfDRX9S3NW2nzw"
+uri = "file://artifacts/itci/public/infrastructure.png"
+type = "image"
+title = "Abstract IT infrastructure"

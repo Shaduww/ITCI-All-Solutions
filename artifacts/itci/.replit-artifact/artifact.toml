@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ITCI - All Solutions In One Place"
+version = "1.0.0"
+id = "artifacts/itci"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23924
+
+[services.development]
+run = "pnpm --filter @workspace/itci run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/itci", "run", "build" ]
+publicDir = "artifacts/itci/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23924"
+BASE_PATH = "/"
