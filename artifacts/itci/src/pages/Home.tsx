@@ -105,6 +105,7 @@ export default function Home() {
                   fontSize: "20px",
                   color: "#ffffff",
                   letterSpacing: "-0.02em",
+                  fontFamily: "Impact, 'Arial Narrow', sans-serif",
                   textShadow: "1px 1px 0 #00b4d8,2px 2px 0 #0096c7,3px 3px 0 #0077b6,4px 4px 0 #023e8a,5px 5px 8px rgba(0,0,0,0.6)",
                 }}
               >
@@ -369,6 +370,7 @@ export default function Home() {
                       fontSize: "20px",
                       color: "#ffffff",
                       letterSpacing: "-0.02em",
+                      fontFamily: "Impact, 'Arial Narrow', sans-serif",
                       textShadow: "1px 1px 0 #00b4d8,2px 2px 0 #0096c7,3px 3px 0 #0077b6,4px 4px 0 #023e8a,5px 5px 8px rgba(0,0,0,0.6)",
                     }}
                   >
