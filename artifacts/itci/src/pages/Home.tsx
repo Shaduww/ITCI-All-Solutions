@@ -101,7 +101,9 @@ export default function Home() {
             <div>
               <div className="font-display font-bold text-xl tracking-tight leading-none text-white">ITCI</div>
               <div className="text-[0.6rem] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
-              <div className="text-[0.6rem] text-white/50 italic tracking-wide leading-none mt-1">We support your dreams</div>
+              <div className="text-[0.6rem] italic tracking-wide leading-none mt-1">
+                <span className="text-white">We support </span><span className="text-primary">your dreams</span>
+              </div>
             </div>
           </div>
 
