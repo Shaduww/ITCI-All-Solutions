@@ -102,7 +102,7 @@ export default function Home() {
               <div
                 className="font-display font-black leading-none select-none"
                 style={{
-                  fontSize: "20px",
+                  fontSize: "30px",
                   color: "#ffffff",
                   letterSpacing: "0.01em",
                   fontFamily: "Impact, 'Arial Narrow', sans-serif",
@@ -366,7 +366,7 @@ export default function Home() {
                   <div
                     className="font-display font-black leading-none select-none"
                     style={{
-                      fontSize: "20px",
+                      fontSize: "30px",
                       color: "#ffffff",
                       letterSpacing: "0.01em",
                       fontFamily: "Impact, 'Arial Narrow', sans-serif",
