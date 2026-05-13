@@ -99,7 +99,17 @@ export default function Home() {
           <div className="flex items-center gap-3 cursor-pointer">
             <ITCILogo size={44} />
             <div>
-              <div className="font-display font-bold text-xl tracking-tight leading-none text-white">ITCI</div>
+              <div
+                className="font-display font-black leading-none select-none"
+                style={{
+                  fontSize: "1.55rem",
+                  color: "#ffffff",
+                  letterSpacing: "-0.02em",
+                  textShadow: "1px 1px 0 #00b4d8,2px 2px 0 #0096c7,3px 3px 0 #0077b6,4px 4px 0 #023e8a,5px 5px 8px rgba(0,0,0,0.6)",
+                }}
+              >
+                ITCI
+              </div>
               <div className="text-[15px] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
               <div className="text-[12px] text-white italic tracking-wide leading-none mt-1">We support your dreams</div>
             </div>
@@ -353,7 +363,17 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-6">
                 <ITCILogo size={44} />
                 <div>
-                  <div className="font-display font-bold text-xl tracking-tight leading-none text-white">ITCI</div>
+                  <div
+                    className="font-display font-black leading-none select-none"
+                    style={{
+                      fontSize: "1.55rem",
+                      color: "#ffffff",
+                      letterSpacing: "-0.02em",
+                      textShadow: "1px 1px 0 #00b4d8,2px 2px 0 #0096c7,3px 3px 0 #0077b6,4px 4px 0 #023e8a,5px 5px 8px rgba(0,0,0,0.6)",
+                    }}
+                  >
+                    ITCI
+                  </div>
                   <div className="text-[0.6rem] text-primary font-semibold uppercase tracking-widest leading-none mt-1">Consulting</div>
                 </div>
               </div>
