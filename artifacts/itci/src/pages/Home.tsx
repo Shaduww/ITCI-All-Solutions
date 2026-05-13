@@ -23,20 +23,70 @@ import { Button } from "@/components/ui/button";
 function ITCILogo({ size = 48 }: { size?: number }) {
   return (
     <div
-      style={{ width: size, height: size }}
-      className="relative flex-shrink-0 bg-primary rounded-xl flex flex-col items-center justify-center overflow-hidden shadow-lg shadow-primary/30"
+      style={{ width: size, height: size, perspective: size * 4 }}
+      className="relative flex-shrink-0"
     >
-      <Monitor
-        style={{ width: size * 0.75, height: size * 0.75 }}
-        className="text-white/20 absolute"
-        strokeWidth={1.5}
-      />
-      <span
-        style={{ fontSize: size * 0.31, letterSpacing: "0.04em" }}
-        className="relative z-10 font-display font-black text-white leading-none"
+      {/* 3D card */}
+      <div
+        style={{
+          width: size,
+          height: size,
+          transform: "rotateX(8deg) rotateY(-12deg)",
+          transformStyle: "preserve-3d",
+          borderRadius: size * 0.22,
+          background: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.75) 100%)",
+          boxShadow: `${size * 0.12}px ${size * 0.18}px ${size * 0.35}px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.18)`,
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+        }}
       >
-        IT
-      </span>
+        {/* Back face depth strip */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            borderRadius: "inherit",
+            background: "linear-gradient(160deg, rgba(255,255,255,0.12) 0%, transparent 60%)",
+            pointerEvents: "none",
+          }}
+        />
+        {/* Large "R" behind */}
+        <span
+          style={{
+            position: "absolute",
+            fontSize: size * 1.05,
+            lineHeight: 1,
+            fontWeight: 900,
+            color: "rgba(255,255,255,0.22)",
+            fontFamily: "inherit",
+            letterSpacing: "-0.05em",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-38%, -48%)",
+            userSelect: "none",
+          }}
+        >
+          R
+        </span>
+        {/* "IT" text in white */}
+        <span
+          style={{
+            position: "relative",
+            zIndex: 10,
+            fontSize: size * 0.32,
+            fontWeight: 900,
+            color: "#ffffff",
+            letterSpacing: "0.05em",
+            textShadow: `0 ${size * 0.04}px ${size * 0.1}px rgba(0,0,0,0.4)`,
+            fontFamily: "inherit",
+          }}
+        >
+          IT
+        </span>
+      </div>
     </div>
   );
 }
